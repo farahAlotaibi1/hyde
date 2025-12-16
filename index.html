@@ -4,34 +4,38 @@ title: Home
 ---
 
 <div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+  <h1>Welcome to Our Pharmacy Project!</h1>
+  <p>This is the homepage for our Pharmacy Management System prototype, documenting its development journey.</p>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+  <hr>
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
+  <h2>📦 Releases (System Versions)</h2>
+  <p>Tracking the major software releases for our digital pharmacy platform:</p>
+  <ul>
+    <li>**Version 1.0 (Alpha):** Basic inventory tracking and user authentication.</li>
+    <li>**Version 2.0 (Planned):** Full prescription management and ordering system integration.</li>
+  </ul>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
+  <hr>
+
+  <h2>🧱 Packages (Dependencies)</h2>
+  <p>Key programming libraries and frameworks used in building the system:</p>
+  <dl>
+    <dt>Jekyll</dt>
+    <dd>For static site documentation and project website hosting.</dd>
+    <dt>Bootstrap</dt>
+    <dd>Frontend framework for responsive design of the Pharmacy UI.</dd>
+    <dt>Python/Django (Future)</dt>
+    <dd>Potential backend framework for complex database operations.</dd>
+  </dl>
+
+  <hr>
+
+  <h2>🚀 Deployment (Documentation Hosting)</h2>
+  <p>Our project documentation is hosted using GitHub Pages. Steps followed for deployment:</p>
+  <ol>
+    <li>Repository Setup on GitHub.</li>
+    <li>Continuous Integration setup via GitHub Actions.</li>
+    <li>Hosting documentation files via GitHub Pages `main` branch.</li>
+  </ol>
 </div>
